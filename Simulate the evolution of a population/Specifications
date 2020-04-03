@@ -1,0 +1,16 @@
+Simulate the evolution of a population in a given number of years
+At each iteration(unit of time-eg. year) you have to introduce:
+-Acres to buy/sell(+/-)
+-Units to feed the population
+-Acres to plant
+After you introduced this informations,the app will compute(at each iteration):
+-number of people that starved
+-number of people that came to the city
+-the population of the city
+-number of acres of land owned by city
+-the harvest (units per acre)
+-number of units ate by rats
+-land price(units per acre)
+-number of grain stocks in units
+
+At the end,the app will tell you how well you managed the population
