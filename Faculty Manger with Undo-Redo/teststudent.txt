@@ -1,0 +1,5 @@
+1;Ion;1;maths;10
+2;gigi;2;maths;10
+3;pisti;3;maths;10
+4;Istvan;4;maths;10
+5;hagi;5;maths;2
