@@ -1,0 +1,17 @@
+I have an app that allows me to add questions,create quizzes with them and take quizzes already created
+Functionalities:
+1.add:
+example of command: add 12;Which number is not prime?;2;32;11;32;easy;
+this fct will add a quiz with 3 options and a correct answer(32) and with a given diff
+2.create:
+example: create easy 4 sample.txt
+creates a quiz on a given difficulty
+with a given number of questions
+and this quiz will be stored in 
+a file specifed in args
+3.start(take):
+use this fct to take an already created test(which is stored in a file);
+this function will also show you the result
+for example: start sample.txt
+
+               
