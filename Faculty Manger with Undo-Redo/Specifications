@@ -1,0 +1,6 @@
+I build an app to manage disciplines,students and grades in a faculty.
+I have CRUD operations for these entities and i also have statistics as students that fail an exam,best students at a discipline etc.
+You can search a student by name or id
+You can undo-redo all operations done
+Before start you can set in settings.properties file your preferences about storage:in-memory,text files or binary files.If you chose files,
+you can also choose in which files.
