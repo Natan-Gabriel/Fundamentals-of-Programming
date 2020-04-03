@@ -122,9 +122,7 @@ class Repo:
         #except ValueError('Enter a integer!!')
         filename=parts[3]
         result=self.read('master.txt')
-        '''
-        result=[['1', 'Which number is the largest?', '1', '4', '3', '4', 'easy'], ['2', 'Which number is the smallest?', '-3', '3', '0', '-3', 'hard']]
-        '''
+
         result1=[result[i] for i in range (1,len(result)) if result[i][6]==diff ]
         
         if len(result1)<number//2:
@@ -187,9 +185,7 @@ class Repo:
         except IOError as e:
             print(e)
         return result
-        '''
-        result=[['1', 'Which number is the largest?', '1', '4', '3', '4', 'easy'], ['2', 'Which number is the smallest?', '-3', '3', '0', '-3', 'hard']]
-        '''
+
         for i in result:
             if result[i][6]=='easy':
                 l.append(result[i]) 
@@ -200,67 +196,6 @@ class Repo:
             if result[i][6]=='hard':
                 l.append(result[i]) 
         return result
-                
-def test():
-    
-    r=Repo()
-    r.add(['add','which','1','2','3','3','hard'],'1','test.txt')
-    result=r.read('test.txt')
-    print(result)
-    assert result==[['1', 'which', '1', '2', '3', '3', 'hard']]
-    r.add(['add','which','1','2','3','3','hard'],'1','test.txt')
-    result=r.read('test.txt')
-    print(result)
-    assert result==[['1', 'which', '1', '2', '3', '3', 'hard'], ['1', 'which', '1', '2', '3', '3', 'hard']]
-    
-    #print(r.read('test1.txt'))
-    
-    
-#test()
-
-def test1():
-    r=Repo()
-    result=r.read('master.txt')
-    #print(result)
-    assert result==[['1', 'Which number is the largest?', '1', '4', '3', '4', 'easy'], ['2', 'Which number is the smallest?', '-3', '3', '0', '-3', 'easy'],
-                    ['3', 'Which number is prime?', '2', '32', '9', '2', 'easy'], 
-                    ['4', 'Which country has the largest GDP', 'Brazil', 'China', 'UK', 'China', 'medium'],
-                    ['5', 'Which is not a fish', 'carp', 'orca', 'eel', 'orca', 'medium'], ['6', 'Name the first satellite', 'Apollo', 'Sputnik', 'Zaria', 'Sputnik', 'medium'],
-                     ['7', 'Which Appolo mission did not make it to the moon', '11', '13', '17', '13', 'hard'], 
-                     ['8', 'A mole can be', 'animal', 'quantity', 'both', 'both', 'hard'], 
-                     ['9', "Name El Cid's horse", 'Babieca', 'Abu', 'Santiago', 'Babieca', 'hard'],
-                      ['10', 'The Western Roman Empire fell in', '654', '546', '476', '476', 'hard']]
-    result=r.read('gigi.txt')
-    #print(result)
-    assert result==[['3', 'Which number is prime?', '2', '32', '9', '2', 'easy'], ['2', 'Which number is the smallest?', '-3', '3', '0', '-3', 'easy'],
-                     ['3', 'Which number is prime?', '2', '32', '9', '2', 'easy'], ['5', 'Which is not a fish', 'carp', 'orca', 'eel', 'orca', 'medium']]
-#test1()
-
-def test2():
-    r=Repo()
-    r.writeToFile('text1.txt', [['3', 'Which number is prime?', '2', '32', '9', '2', 'easy'],
-                                 ['2', 'Which number is the smallest?', '-3', '3', '0', '-3', 'easy']])
-    result=r.read('text1.txt')
-    #print(result)
-    assert result==[['3', 'Which number is prime?', '2', '32', '9', '2', 'easy'], ['2', 'Which number is the smallest?', '-3', '3', '0', '-3', 'easy']]
-test2()
-
-
-
-def test3():
-    r=Repo()
-    r.create(['create', "easy", 3, 'Abu'])
-    res=r.read('text1.txt')
-    print(res)
-    count=0
-    for i in range (0,4):
-        if res[i][6]=='hard':
-            count+=1
-    assert count>=4/2
-    
-    
-#test3()    
-
 
 
 
