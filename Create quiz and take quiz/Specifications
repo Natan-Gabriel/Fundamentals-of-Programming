@@ -14,4 +14,8 @@ use this fct to take an already created test(which is stored in a file);
 this function will also show you the result
 for example: start sample.txt
 
+
+In master.txt you have all questions
+In sample.txt you have an example of quiz
+
                
